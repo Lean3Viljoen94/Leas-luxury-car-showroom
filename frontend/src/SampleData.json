@@ -1,0 +1,92 @@
+[
+    {
+        "vehicle": "BMW 116i (E87)",
+        "color": "White",
+        "sellingPrice": "R 120 000,00",
+        "year": 2014,
+        "mileage": 175640,
+        "imageUrl": "https://amcdn.co.za/cars/bmw-1-series-116i-5-door-exclusive-2011-id-53210078-type-main.jpg?width=800",
+        "description": "Enter vehicle description here"
+    },
+    {
+        "vehicle": "VOLKSWAGEN GOLF VI 1.4 TSi COMFORTLINE",
+        "color": "White",
+        "sellingPrice": "R 359 999,99",
+        "year": 2018,
+        "mileage": 70020,
+        "imageUrl": "https://amcdn.co.za/cars/vw-golf-vi-1-4-tsi-comfortline-dsg-id-50093544-type-main.jpg?width=800",
+        "description": "Enter vehicle description here"
+    },
+    {
+        "vehicle": "KIA RIO 1.4 5DR",
+        "color": "White",
+        "sellingPrice": "R 150 000,00",
+        "year": 2017,
+        "mileage": 64880,
+        "imageUrl": "https://amcdn.co.za/cars/kia-rio-1-4-tec-5dr-a-t-2014-id-33362709-type-small.jpg",
+        "description": "Enter vehicle description here"
+    },
+    {
+        "vehicle": "FORD FIESTA 1.4i AMBIENTE 5Dr",
+        "color": "Silver",
+        "sellingPrice": "R 124 999,99",
+        "year": 2015,
+        "mileage": 102558,
+        "imageUrl": "https://amcdn.co.za/cars/ford-fiesta-1-4i-ambiente-5dr-2016-id-35909745-type-small.jpg",
+        "description": "Enter vehicle description here"
+    },
+    {
+        "vehicle": "HYUNDAI ELANTRA 1.6 GLS/PREMIUM",
+        "color": "Silver",
+        "sellingPrice": "R 194 999,99",
+        "year": 2014,
+        "mileage": 66400,
+        "imageUrl": "",
+        "description": "Enter vehicle description here"
+    },
+    {
+        "vehicle": "VOLKSWAGEN POLO 1.4 COMFORTLINE 5DR",
+        "color": "White",
+        "sellingPrice": "R 180 000,00",
+        "year": 2017,
+        "mileage": 89750,
+        "imageUrl": "",
+        "description": "Enter vehicle description here"
+    },
+    {
+        "vehicle": "CHEVROLET SONIC 1.6 LS 5DR",
+        "color": "White",
+        "sellingPrice": "R 120 000,00",
+        "year": 2017,
+        "mileage": 173200,
+        "imageUrl": "https://img-ik.cars.co.za/carsimages/tr:n-stock_large/5202651.jpg?v=3245173779",
+        "description": "Enter vehicle description here"
+    },
+    {
+        "vehicle": "AUDI A3 1.8 T",
+        "color": "Silver",
+        "sellingPrice": "R 260 000,00",
+        "year": 2019,
+        "mileage": 5400,
+        "imageUrl": "https://amcdn.co.za/cars/audi-a3-1-8t-hatchback-2012-id-33868700-type-main.jpg?width=800",
+        "description": "Enter vehicle description here"
+    },
+    {
+        "vehicle": "CHEVROLET AVEO 1.5 LS A/T",
+        "color": "Black",
+        "sellingPrice": "R 100 000,00",
+        "year": 2017,
+        "mileage": 75000,
+        "imageUrl": "https://img-ik.cars.co.za/carsimages/tr:n-stock_med/5230683.jpg?v=3351304038",
+        "description": "Enter vehicle description here"
+    },
+    {
+        "vehicle": "OPEL CORSA 1.0T ECOFLEX ESSENTIA 5DR",
+        "color": "Yellow",
+        "sellingPrice": "R 135 999,99",
+        "year": 2016,
+        "mileage": 130000,
+        "imageUrl": "",
+        "description": "Enter vehicle description here"
+    }
+]

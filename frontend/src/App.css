@@ -1,0 +1,64 @@
+.App {
+  text-align: center;
+}
+.imgTextDiv{
+  display: flex;
+  flex-direction: row;
+}
+
+.vehicleName{
+  font-family: 'Raleway', sans-serif;
+}
+
+.carImg {
+  height: 200px;
+  width: 300px;
+  align-self: center;
+}
+
+.imgDiv{
+  /* display: flex; */
+}
+
+.row{
+  display: block;
+}
+
+.bg-dark {
+  background-color: pink !important;
+  height: 240px;
+}
+
+.carousel-slider{
+  height: 500px;
+}
+
+.filterDiv {
+  display: flex;
+  margin-left: auto;
+}
+
+.dropdown {
+  padding: 60px;
+}
+
+.btn-primary {
+  background-color: pink;
+  border-color: pink;
+  color: black;
+  width: 300px;
+}
+
+.navbar-brand {
+  font-family: 'Allura', cursive;
+  font-size: 90px;
+}
+
+.mr-auto {
+  padding-left: 10%;
+}
+
+.nav-link {
+  padding-right: 1cm;
+  padding-left: 1cm;
+}
