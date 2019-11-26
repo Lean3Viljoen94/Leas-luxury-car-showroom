@@ -1,22 +1,20 @@
-import React from 'react';
-import './App.css';
-import CarCards from './Components/CarCards';
-import AddCar from './Components/AddCar';
-import CarCarousel from './Components/Carousel';
-import CarHeader from './Components/Header';
-import Filters from './Components/Filters';
+import React, { Component } from 'react';
 
+import "./App.css";
+import CarCarousel from "./Components/Carousel";
+import CarHeader from "./Components/Header";
+import Content from "./Components/Content";
+
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <CarHeader/>
-      <CarCarousel/>
-      <br/>
-      <Filters/>
-      <CarCards/>
-      <br/>
-      <AddCar/>
+      <Router>
+        <CarHeader />
+        <CarCarousel />
+        <Content />
+      </Router>
     </div>
   );
 }

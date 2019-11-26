@@ -9,6 +9,7 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 
 import pink1 from '../Images/pink1.jpg';
+import Filters from "./Filters";
 
 
 function CarCards() {
@@ -45,6 +46,7 @@ function CarCards() {
   ));
   return (
     <div>
+    <Filters />
     <Container>
       <Row>{listCars}</Row>
     </Container>

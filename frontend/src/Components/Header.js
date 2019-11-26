@@ -1,8 +1,14 @@
 import React, { Component } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import { Route, Link } from "react-router-dom";
 
-
+class NavLink extends Component {
+  render() {
+    var { className, activeClassName, to, exact, ...rest } = this.props;
+    return <Link className={className} to={to} {...rest} />
+  }
+}
 
 class CarHeader extends Component {
   render() {
@@ -11,8 +17,18 @@ class CarHeader extends Component {
         <Navbar bg="dark" variant="dark">
           <Navbar.Brand href="#home">Lea's Luxury Cars</Navbar.Brand>
           <Nav className="mr-auto">
-            <Nav.Link className="nav-link" href="#home">Showroom</Nav.Link>
-            <Nav.Link className="nav-link" href="#about">Add a Car</Nav.Link>
+            <div className="navbar">
+              <NavLink to="/" className="navlink" activeClassName="active">
+                Showrom
+              </NavLink>
+              <NavLink
+                to="/addcar"
+                className="navlink"
+                activeClassName="active"
+              >
+                Add A Car
+              </NavLink>
+            </div>
           </Nav>
         </Navbar>
       </div>
@@ -20,4 +36,3 @@ class CarHeader extends Component {
   }
 }
 export default CarHeader;
-
