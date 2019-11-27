@@ -16,8 +16,9 @@
   align-self: center;
 }
 
-.imgDiv{
-  /* display: flex; */
+.navlink{
+  color: white;
+  padding-right: 40px;
 }
 
 .row{
@@ -26,7 +27,7 @@
 
 .bg-dark {
   background-color: pink !important;
-  height: 240px;
+  height: 180px;
 }
 
 .carousel-slider{
@@ -61,4 +62,14 @@
 .nav-link {
   padding-right: 1cm;
   padding-left: 1cm;
+}
+
+.form{
+  border-radius: 8px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.heading1 {
+  display: inline-flex;
 }

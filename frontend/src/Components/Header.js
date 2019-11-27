@@ -18,13 +18,12 @@ class CarHeader extends Component {
           <Navbar.Brand href="#home">Lea's Luxury Cars</Navbar.Brand>
           <Nav className="mr-auto">
             <div className="navbar">
-              <NavLink to="/" className="navlink" activeClassName="active">
-                Showrom
+              <NavLink to="/" className="navlink" >
+                Showroom
               </NavLink>
               <NavLink
                 to="/addcar"
                 className="navlink"
-                activeClassName="active"
               >
                 Add A Car
               </NavLink>
