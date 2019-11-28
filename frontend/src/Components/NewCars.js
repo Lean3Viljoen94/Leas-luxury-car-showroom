@@ -1,4 +1,6 @@
 import React from "react";
+import "../App.css";
+
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
@@ -213,7 +215,7 @@ class NewCars extends React.Component {
           </form>
         </div>
         <br />
-        <h2>Cars available:</h2>
+        <h2 className="carsAvailable">New Cars Addded:</h2>
         <br />
         <br />
         <div>
@@ -223,17 +225,21 @@ class NewCars extends React.Component {
             if (!this.props.showOnlyOldCars || (this.props.showOnlyOldCars && car.model < "2009")) {
               return (
                 <div key={car._id}>
-                  <Card>   
+                  <Card className="newCarsCard">   
                   Make: {car.make}
+                  <br />
                   <br />
                   Model: {car.model}
                   <br />
+                  <br />
                   Registration Number: {car.regNr}
+                  <br />
                   <br />
                   Current Owner: {car.currentOwner}
                   <br />
+                  <br />
                   <Button
-                    className="buttons"
+                    className="newCarsButtons"
                     variant="secondary"
                     size="sm"
                     onClick={() => this.editCar(car)}
@@ -241,7 +247,7 @@ class NewCars extends React.Component {
                     Edit
                   </Button>
                   <Button
-                    className="buttons"
+                    className="newCarsButtons"
                     variant="secondary"
                     size="sm"
                     onClick={() => this.deleteCar(car._id)}
@@ -249,6 +255,9 @@ class NewCars extends React.Component {
                     Delete
                   </Button>
                   </Card>
+                  <br/>
+                  <br/>
+                  <br/>
                 </div>
               );
             } else {

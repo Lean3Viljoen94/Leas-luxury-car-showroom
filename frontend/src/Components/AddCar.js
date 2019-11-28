@@ -26,7 +26,7 @@ class AddCar extends React.Component {
       <div className="App">
         <Jumbotron fluid>
           <Container>
-            <h1>Add A Car</h1>
+            <h1 className="addCar">Add A Car</h1>
             <p>Add a car by entering the details in the form below.</p>
             <p>
               Edit existing car details by clicking on the Edit button.
@@ -35,7 +35,7 @@ class AddCar extends React.Component {
               Please note that the "model" field is required. 
             </p>
             <Button variant="outline-info" onClick={this.toggleOldCarsOnly}>
-              View all cars older than 10 years
+              View all added cars older than 10 years
             </Button>
           </Container>
         </Jumbotron>
