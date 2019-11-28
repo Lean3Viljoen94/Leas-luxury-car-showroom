@@ -10,45 +10,36 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
-import Modal from "react-bootstrap/Modal";
 
 import Filters from "./Filters";
+import "../modal.css";
 
-function showMore() {
-  const show = false;
-  const setShow = () => {};
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-  return (
-    <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
-  );
+class Modal extends React.Component {
+  render() {
+    return (
+      <div id="dimmer">
+        <div id="modal">
+          <h2>{this.props.car.vehicle}</h2>
+          <img src={this.props.car.imageUrl} alt="carImg" height="150px" width="200px"></img>
+          <p>Color: {this.props.car.color}</p>
+          <p>Year: {this.props.car.year}</p>
+          <p>Mileage: {this.props.car.mileage}</p>
+          <p>Description: {this.props.car.description}</p>
+          <p>Price: {this.props.car.sellingPrice}</p>
+          <br/>
+          <Button className="close" onClick={this.props.onClose()}>Close</Button>
+        </div>
+      </div>
+    )
+  }
 }
 
 class CarCards extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      carToShowInModal:0,
+      modalOpen: false,
       yearMin: 0,
       yearMax: Infinity,
       priceMin: 0,
@@ -56,6 +47,17 @@ class CarCards extends Component {
       mileMin: 0,
       mileMax: Infinity
     };
+    this.showCarInModal = this.showCarInModal.bind(this);
+    this.hideCarModal = this.hideCarModal.bind(this);
+
+    }
+  showCarInModal(car) {
+    this.setState({modalOpen : true,
+    carToShowInModal: car});
+  }
+
+  hideCarModal(){
+    this.setState({modalOpen : false});
   }
 
   setYearRange = (min, max) => {
@@ -79,7 +81,7 @@ class CarCards extends Component {
     });
   };
 
-  render() {
+  render(){
     var carData = carSampleData;
 
     const filteredCars = carData.filter(car => {
@@ -128,7 +130,7 @@ class CarCards extends Component {
               </div>
             </div>
             <Card.Footer>
-              <Button onClick={showMore}>See more</Button>
+            <Button onClick={() => this.showCarInModal(car)}>See more</Button>
             </Card.Footer>
           </Card>
         </CardGroup>
@@ -144,7 +146,8 @@ class CarCards extends Component {
           setPriceRange={this.setPriceRange}
           setMileageRange={this.setMileageRange}
         />
-        <Container>
+        {this.state.modalOpen ? <Modal car={this.state.carToShowInModal} onClose={() => this.hideCarModal}/> : null}
+          <Container>
           <Row>{listCars}</Row>
         </Container>
       </div>
