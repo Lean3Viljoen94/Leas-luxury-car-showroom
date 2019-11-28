@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/Dropdown";
 
+// Receives state from CarCards component 
+
 class Filters extends Component {
   render() {
     return (

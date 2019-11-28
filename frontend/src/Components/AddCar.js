@@ -14,7 +14,7 @@ class AddCar extends React.Component {
     };
   }
 
-  // this function toggles whether we show all cars or only show card older than 5 years. 
+  // this function toggles whether we show all cars or only show card older than 10 years. State is passed to NewCars component
   toggleOldCarsOnly = e => {
     this.setState({
       showOnlyOldCars: !this.state.showOnlyOldCars

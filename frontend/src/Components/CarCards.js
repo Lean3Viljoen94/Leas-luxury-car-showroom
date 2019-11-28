@@ -3,6 +3,8 @@ import ReactImageFallback from "react-image-fallback";
 
 import carSampleData from "../SampleData.json";
 import placeholderImg from "../Images/placeholder.jpg";
+import Filters from "./Filters";
+import "../modal.css";
 
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
@@ -11,16 +13,19 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import ListGroup from "react-bootstrap/ListGroup";
 
-import Filters from "./Filters";
-import "../modal.css";
-
+// modal receives props from CarCards component. 
 class Modal extends React.Component {
   render() {
     return (
       <div id="dimmer">
         <div id="modal">
-          <h2>{this.props.car.vehicle}</h2>
-          <img src={this.props.car.imageUrl} alt="carImg" height="150px" width="200px"></img>
+          <h5>{this.props.car.vehicle}</h5>
+          <ReactImageFallback
+                  src={this.props.car.imageUrl}
+                  fallbackImage={placeholderImg}
+                  alt="imageUrl"
+                  className="carImg"
+                />
           <p>Color: {this.props.car.color}</p>
           <p>Year: {this.props.car.year}</p>
           <p>Mileage: {this.props.car.mileage}</p>
@@ -33,6 +38,9 @@ class Modal extends React.Component {
     )
   }
 }
+
+// State on filters for min & max to pass on as props to Filters component. 
+// Modal state passed as props to modal
 
 class CarCards extends Component {
   constructor(props) {

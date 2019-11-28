@@ -4,8 +4,6 @@ import "../App.css";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-// import "./cars.css";
-
 // fetch the API we want to use (backend)
 export const fetchData = async () => {
   const api_call = await fetch(`http://localhost:8000/`);
@@ -75,6 +73,7 @@ class NewCars extends React.Component {
           body: JSON.stringify(this.state.currentlyEditing)
         });
         const newcar = await response.json();
+        
         // Update local state to also include this object
         this.setState({
           currentlyEditing: {
